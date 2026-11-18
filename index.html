@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical DevOps course covering automation, cloud, containers, infrastructure, and observability.">
+  <title>OpsCraft — DevOps Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="OpsCraft home">
+      <span class="brand-mark">OC</span>
+      <span>OpsCraft</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#curriculum">Curriculum</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">
+      <span class="theme-icon" aria-hidden="true">☀</span>
+      <span class="theme-label">Light</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span> Cohort 04 · Enrollment open</div>
+        <h1>Build systems that<br><em>ship with confidence.</em></h1>
+        <p class="hero-text">A project-first DevOps course for engineers who want to automate infrastructure, deploy resilient workloads, and understand the full path from commit to production.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#curriculum">Explore the syllabus <span>↘</span></a>
+          <a class="text-link" href="#roadmap">See the learning path <span>→</span></a>
+        </div>
+        <div class="hero-stats" aria-label="Course statistics">
+          <div><strong>10</strong><span>core modules</span></div>
+          <div><strong>36h</strong><span>guided practice</span></div>
+          <div><strong>5</strong><span>portfolio projects</span></div>
+        </div>
+      </div>
+
+      <div class="terminal-wrap reveal" aria-label="Animated deployment terminal">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span>deploy.sh</span>
+            <span class="terminal-status">● live</span>
+          </div>
+          <div class="terminal-body" id="terminalOutput">
+            <p><span class="prompt">$</span> terraform apply <span class="muted">--auto-approve</span></p>
+            <p class="success">✓ Infrastructure provisioned</p>
+            <p><span class="prompt">$</span> ansible-playbook cluster.yml</p>
+            <p class="success">✓ Configuration complete</p>
+            <p><span class="prompt">$</span> kubectl rollout status deploy/api</p>
+            <p class="info">Waiting for deployment...</p>
+            <p class="success terminal-final">✓ Successfully rolled out <span class="cursor"></span></p>
+          </div>
+        </div>
+        <div class="floating-card card-uptime"><span>UPTIME</span><strong>99.99%</strong></div>
+        <div class="floating-card card-build"><span>BUILD</span><strong>#0842 ✓</strong></div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Technologies covered">
+      <span>TOOLS YOU'LL MASTER</span>
+      <div class="tool-list">
+        <b>Ansible</b><i>·</i><b>Docker</b><i>·</i><b>AWS</b><i>·</i><b>Kubernetes</b><i>·</i><b>Terraform</b><i>·</i><b>Grafana</b>
+      </div>
+    </section>
+
+    <section class="curriculum section" id="curriculum">
+      <div class="section-heading reveal">
+        <div><span class="kicker">01 / CURRICULUM</span><h2>From terminal to<br>production.</h2></div>
+        <p>Ten focused modules. Each one pairs essential theory with a practical lab, so every concept becomes a skill you can use.</p>
+      </div>
+
+      <div class="filters reveal" role="group" aria-label="Filter course modules">
+        <button class="filter active" data-filter="all" type="button">All modules</button>
+        <button class="filter" data-filter="foundation" type="button">Foundation</button>
+        <button class="filter" data-filter="delivery" type="button">Delivery</button>
+        <button class="filter" data-filter="cloud" type="button">Cloud & Scale</button>
+        <button class="filter" data-filter="observe" type="button">Observability</button>
+      </div>
+
+      <div class="module-grid">
+        <article class="module-card reveal" data-category="foundation">
+          <div class="module-top"><span class="module-number">01</span><span class="module-icon">⌁</span></div>
+          <h3>SSH</h3><p>Secure remote access, keys, agents, tunnels, and hardened server configuration.</p>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>A secure multi-host access setup using keys, aliases, and jump hosts.</p></div>
+        </article>
+
+        <article class="module-card reveal" data-category="foundation">
+          <div class="module-top"><span class="module-number">02</span><span class="module-icon">▣</span></div>
+          <h3>Virtualization & VirtualBox</h3><p>Virtual machines, networking modes, snapshots, and reproducible lab environments.</p>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>An isolated Linux lab with multiple networked virtual machines.</p></div>
+        </article>
+
+        <article class="module-card reveal" data-category="foundation">
+          <div class="module-top"><span class="module-number">03</span><span class="module-icon">⚙</span></div>
+          <h3>Ansible</h3><p>Inventories, playbooks, roles, variables, templates, and idempotent automation.</p>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>A reusable playbook that configures an entire web server fleet.</p></div>
+        </article>
+
+        <article class="module-card featured reveal" data-category="delivery">
+          <div class="module-top"><span class="module-number">04</span><span class="module-icon">◫</span></div>
+          <span class="popular">CORE SKILL</span><h3>Installing Docker</h3><p>Install and configure Docker, then build images and run multi-container applications.</p>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>A production-ready container image and a complete Compose stack.</p></div>
+        </article>
+
+        <article class="module-card reveal" data-category="delivery">
+          <div class="module-top"><span class="module-number">05</span><span class="module-icon">∞</span></div>
+          <h3>CI/CD</h3><p>Pipelines, automated tests, artifacts, deployment strategies, and safe releases.</p>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>A pipeline that tests, builds, scans, and deploys every commit.</p></div>
+        </article>
+
+        <article class="module-card reveal" data-category="cloud">
+          <div class="module-top"><span class="module-number">06</span><span class="module-icon">☁</span></div>
+          <h3>AWS</h3><p>IAM, VPC, EC2, S3, load balancing, scaling, and cloud architecture fundamentals.</p>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>A secure, load-balanced application across multiple availability zones.</p></div>
+        </article>
+
+        <article class="module-card reveal" data-category="cloud">
+          <div class="module-top"><span class="module-number">07</span><span class="module-icon">⬡</span></div>
+          <h3>Kubernetes</h3><p>Pods, workloads, services, ingress, configuration, scaling, and rollouts.</p>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>A resilient application with health checks, autoscaling, and zero-downtime updates.</p></div>
+        </article>
+
+        <article class="module-card reveal" data-category="cloud">
+          <div class="module-top"><span class="module-number">08</span><span class="module-icon">◇</span></div>
+          <h3>Terraform</h3><p>Infrastructure as code, state, providers, modules, variables, and team workflows.</p>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>A versioned AWS environment built from reusable Terraform modules.</p></div>
+        </article>
+
+        <article class="module-card wide reveal" data-category="observe">
+          <div class="module-top"><span class="module-number">09</span><span class="module-icon">⌁</span></div>
+          <div class="wide-content"><div><h3>Monitoring & Observability</h3><p>Collect metrics, logs, and telemetry to understand system health before users notice a problem.</p></div><div class="tech-pills"><span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Alloy</span></div></div>
+          <button class="expand-button" type="button" aria-expanded="false"><span>What you'll build</span><b>+</b></button>
+          <div class="module-details"><p>A unified observability stack with dashboards, central logs, and actionable alerts.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="outcomes section" id="outcomes">
+      <div class="outcome-panel reveal">
+        <span class="kicker">02 / OUTCOMES</span>
+        <h2>Leave with proof,<br>not just notes.</h2>
+        <p>By the end of the course, you will have a complete deployment system and the confidence to explain every part of it.</p>
+        <div class="check-list">
+          <span>Automate server configuration</span><span>Provision cloud infrastructure</span><span>Ship through CI/CD</span><span>Operate Kubernetes workloads</span><span>Monitor real systems</span><span>Debug production issues</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-label">CAPSTONE PROJECT</div>
+        <div class="architecture" aria-hidden="true">
+          <div class="arch-node">Git</div><span>→</span><div class="arch-node">CI</div><span>→</span><div class="arch-node accent">K8s</div>
+          <i></i><i></i><i></i>
+          <div class="arch-node small">AWS</div><span>+</span><div class="arch-node small">Grafana</div><span>+</span><div class="arch-node small">Loki</div>
+        </div>
+        <h3>Production delivery platform</h3>
+        <p>Combine infrastructure, automation, delivery, orchestration, and observability into one portfolio-ready system.</p>
+      </div>
+    </section>
+
+    <section class="roadmap section" id="roadmap">
+      <div class="section-heading reveal"><div><span class="kicker">03 / ROADMAP</span><h2>Your path forward.</h2></div><p>A deliberate sequence that builds from Linux fundamentals to operating distributed systems.</p></div>
+      <div class="timeline reveal">
+        <div class="timeline-line"><span></span></div>
+        <div class="phase"><b>01</b><span>FOUNDATIONS</span><h3>Connect & automate</h3><p>SSH · VirtualBox · Ansible</p></div>
+        <div class="phase"><b>02</b><span>DELIVERY</span><h3>Package & ship</h3><p>Docker · CI/CD</p></div>
+        <div class="phase"><b>03</b><span>PLATFORM</span><h3>Build & scale</h3><p>AWS · Terraform · Kubernetes</p></div>
+        <div class="phase"><b>04</b><span>OPERATIONS</span><h3>Observe & improve</h3><p>Prometheus · Grafana · Loki · Alloy</p></div>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div><span class="kicker">READY TO BUILD?</span><h2>Turn complexity into<br><em>reliable systems.</em></h2></div>
+      <a class="button button-light" href="mailto:hello@example.com?subject=OpsCraft%20course">Start your journey <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top"><span class="brand-mark">OC</span><span>OpsCraft</span></a>
+    <p>Practical skills for modern infrastructure.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
